@@ -1,4 +1,4 @@
-/* Navbar Genel Stil */
+/* Navbar General Styling */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -8,13 +8,13 @@
     color: white;
 }
 
-/* Logo Konteyner */
+/* Logo Container */
 .logo-container {
     display: flex;
     align-items: center;
 }
 
-/* Logo */
+/* Logo Styling */
 .logo {
     width: 50px;
     height: 50px;
@@ -23,24 +23,25 @@
     margin-right: 10px;
 }
 
-/* Logo Yazı Stili */
+/* Logo Text Styling */
 .logo-text {
     font-size: 24px;
     font-weight: bold;
 }
 
-/* Navigation Linkler */
+/* Navigation Links */
 .nav-links {
     list-style: none;
     display: flex;
     gap: 20px;
 }
 
-/* Link Stilleri */
+/* Navigation List Items */
 .nav-links li {
     display: inline;
 }
 
+/* Navigation Link Styling */
 .nav-links a {
     text-decoration: none;
     color: white;
@@ -48,11 +49,12 @@
     transition: color 0.3s ease;
 }
 
+/* Navigation Hover Effect */
 .nav-links a:hover {
     color: lightgray;
 }
 
-/* Ana İçerik */
+/* Main Content Styling */
 main {
     text-align: center;
     margin-top: 50px;
