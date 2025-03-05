@@ -1,0 +1,61 @@
+/* Navbar Genel Stil */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: navy;
+    padding: 15px 20px;
+    color: white;
+}
+
+/* Logo Konteyner */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo */
+.logo {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Logo Yazı Stili */
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Navigation Linkler */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+/* Link Stilleri */
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: lightgray;
+}
+
+/* Ana İçerik */
+main {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 24px;
+    font-weight: bold;
+}

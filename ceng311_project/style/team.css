@@ -1,0 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.intro{
+    max-width: 800px;
+    margin: 0 auto 40px; 
+    line-height: 1.5; 
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.team-item {
+    background: white;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+
+.team-item img {
+    width: 100%;
+    height: 500px; /* Sabit bir yükseklik belirleyerek tutarlı görünüm sağla */
+    object-fit: cover; /* Resmi kırpmadan, kutuya sığdır */
+    border-radius: 10px;
+}
