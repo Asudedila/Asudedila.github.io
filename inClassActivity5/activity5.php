@@ -30,7 +30,7 @@ if (isset($_GET['from_value'], $_GET['from_currency'], $_GET['to_currency'])) {
 				From:
 			</td>
             <td>
-                <input type="text" name="from_value" required/>
+                <input type="text" name="from_value" />
             </td>
             <td>
 				Currency:
