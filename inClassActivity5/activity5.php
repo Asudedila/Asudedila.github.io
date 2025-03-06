@@ -48,7 +48,7 @@ if (isset($_GET['from_value'], $_GET['from_currency'], $_GET['to_currency'])) {
 				To:
 			</td>
             <td>
-                <input type="text" value="<?php echo $result; ?>" />
+                <input type="text" value="<?php echo $result; ?>" readonly />
             </td>
             <td>
 				Currency:
