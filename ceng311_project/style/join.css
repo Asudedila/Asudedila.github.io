@@ -4,6 +4,7 @@ body {
     margin: 0; 
     padding: 0;
     background-color: #f9f9f9; 
+    background-image: linear-gradient(rgba(255, 255, 255, 0.50)), url('../image/background.avif');
 }
 
 /* Introduction section styling */
@@ -75,3 +76,76 @@ body {
     background-color: #388E3C; 
     color: #fff; 
 }  
+
+/* jQuery UI Popup Form Stil */
+.ui-dialog form {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.ui-dialog label {
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.ui-dialog input,
+.ui-dialog select {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.ui-dialog input:focus,
+.ui-dialog select:focus {
+  border-color: #007BFF;
+  box-shadow: 0 0 5px rgba(0,123,255,0.3);
+  outline: none;
+}
+
+
+/* FAQ Accordion */
+.faq-container {
+  max-width: 800px;
+  margin: 40px auto;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.faq-item {
+  border-bottom: 1px solid #ddd;
+}
+
+.faq-question {
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.faq-question:hover {
+  background-color: #f9f9f9;
+}
+
+.faq-answer {
+  display: none;
+  padding: 0 15px 15px;
+  font-size: 15px;
+  color: #444;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.faq-question.active .arrow {
+  transform: rotate(180deg);
+}

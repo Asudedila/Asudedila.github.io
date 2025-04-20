@@ -3,11 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us</title>
+    <title>Join Us</title>
     <link rel="stylesheet" href="style/navbar.css">
     <link rel="stylesheet" href="style/join.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
+    <!-- jQuery + jQuery UI -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"></script>
 </head>
 <body>
+    <script>
+        
+        $(document).ready(function() {
+            $(".faq-question").click(function () {
+         
+              if (!$(this).hasClass("active")) {
+                $(".faq-answer").slideUp();
+                $(".faq-question").removeClass("active");
+              }
+
+              $(this).next(".faq-answer").slideToggle();
+              $(this).toggleClass("active");
+            });
+          });
+
+        $(function () {
+          $("#volunteer-popup").dialog({
+            autoOpen: false,
+            modal: true,
+            width: 400
+          });
+    
+          $("#sponsor-popup").dialog({
+            autoOpen: false,
+            modal: true,
+            width: 400
+          });
+    
+          $(".volunteer-btn").click(function (e) {
+            e.preventDefault();
+            $("#volunteer-popup").dialog("open");
+          });
+    
+          $(".sponsor-btn").click(function (e) {
+            e.preventDefault();
+            $("#sponsor-popup").dialog("open");
+          });
+        });
+        
+        $(document).ready(function () {
+            $("#corporate-toggle").change(function () {
+              if ($(this).is(":checked")) {
+                $("#corporate-fields").slideDown();
+                $("#individual-fields").slideUp();
+              } else {
+                $("#corporate-fields").slideUp();
+                $("#individual-fields").slideDown();
+              }
+            });
+          });
+      </script>
 
     <!-- Navigation Bar -->
     <nav class="navbar">
@@ -61,12 +116,134 @@
     
         <!-- FAQ Section -->
         <h1>Frequently Asked Question</h1>
-        <div >
-            <p class="question-box">How do I get involved as a volunteer?</p>
-            <p class="question-box">What materials are needed for toy making?</p>
-            <p class="question-box">How does sponsorship work?</p>
-        </div>
+        
+          <div class="faq-container">
+            <div class="faq-item">
+              <button class="faq-question">
+                How do I get involved as a volunteer?
+                <span class="arrow">▼</span>
+              </button>
+              <div class="faq-answer">
+                You can sign up through the form by clicking the "Sign Up as a Volunteer" button above.
+              </div>
+            </div>
+          
+            <div class="faq-item">
+              <button class="faq-question">
+                What materials are needed for toy making?
+                <span class="arrow">▼</span>
+              </button>
+              <div class="faq-answer">
+                Commonly used materials include fabric, felt, stuffing, thread, and safe non-toxic paints.
+              </div>
+            </div>
+          
+            <div class="faq-item">
+                <button class="faq-question">
+                    How does sponsorship work?
+                  <span class="arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    Sponsors can support us financially, by donating materials, or by sponsoring events.
+                </div>
+              </div>
+          </div>
+          
     
+          <div id="volunteer-popup" title="Volunteer Registration" style="display: none;">
+            <form>
+              <h3>General Information</h3>
+          
+              <input type="text" placeholder="First Name " required />
+              <input type="text" placeholder="Last Name " required />
+              <input type="tel" placeholder="Phone Number (05XXXXXXXXX) " pattern="[0-9]{11}" required />
+              <input type="email" placeholder="Email Address " required />
+              <input type="text" placeholder="City " required />
+              <input type="text" placeholder="University " required />
+              <input type="text" placeholder="Department / Program " required />
+          
+              <input type="url" placeholder="Your LinkedIn profile (if any) " />
+          
+              <button type="submit" class="btn-red">Submit</button>
+            </form>
+          </div>
+          
+
+          <!-- POPUP FORM - SPONSOR -->
+          <div id="sponsor-popup" title="Sponsor Registration" style="display: none;">
+            <form id="sponsor-form">
+          
+              <div class="form-group">
+                <label>
+                  <input type="checkbox" id="corporate-toggle" />
+                  I am making a corporate donation
+                </label>
+              </div>
+          
+              <div id="corporate-fields" style="display: none;">
+                <div class="form-group">
+                  <label for="company-name">Company Name *</label>
+                  <input type="text" id="company-name" name="companyName" />
+                </div>
+          
+                <div class="form-group">
+                  <label for="company-website">Company Website (optional)</label>
+                  <input type="url" id="company-website" name="companyWebsite" />
+                </div>
+          
+                <div class="form-group">
+                  <label for="contact-person">Contact Person Name *</label>
+                  <input type="text" id="contact-person" name="contactPerson" />
+                </div>
+          
+                <div class="form-group">
+                  <label for="contact-phone">Contact Phone *</label>
+                  <input type="tel" id="contact-phone" name="contactPhone" />
+                </div>
+          
+                <div class="form-group">
+                  <label for="sponsorship-type">Type of Sponsorship</label>
+                  <select id="sponsorship-type" name="sponsorshipType">
+                    <option>Financial</option>
+                    <option>Material Support</option>
+                    <option>Event Sponsorship</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+          
+              </div>
+          
+              <div id="individual-fields">
+                <div class="input-group">
+                  <div class="form-group">
+                    <label for="first-name">First Name *</label>
+                    <input type="text" id="first-name" name="firstName" required />
+                  </div>
+                  <div class="form-group">
+                    <label for="last-name">Last Name *</label>
+                    <input type="text" id="last-name" name="lastName" required />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email Address *</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+              </div>
+        
+          
+              <div class="form-group">
+                <label><input type="checkbox" name="showName" checked /> Display my name</label>
+              </div>
+          
+              <div class="form-group">
+                <label><input type="checkbox" name="showAmount" /> Display my donation amount</label>
+              </div>
+          
+              <button type="submit" class="btn-red">➔ Continue</button>
+            </form>
+          </div>
+          
+  
 
 </body>
 </html>

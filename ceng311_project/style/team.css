@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.50)), url('../image/background.avif');
     text-align: center;
 }
 
