@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Join Us</title>
-    <link rel="stylesheet" href="style/navbar.css">
     <link rel="stylesheet" href="style/join.css">
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css" />
     <!-- jQuery + jQuery UI -->
@@ -62,26 +61,16 @@
               }
             });
           });
+          fetch("navbar.html")
+          .then(res => res.text())
+          .then(data => {
+          document.getElementById("navbar-placeholder").innerHTML = data;
+          });
       </script>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="logo-container">
-            <!-- Logo Image -->
-            <img src="image/logo.jpg" alt="Logo" class="logo">
-            <span class="logo-text">Toy Inventory</span>
-        </div>
-        
-        <!-- Navigation Links -->
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="join.html">Join Us</a></li>
-            <li><a href="team.html">Our Team</a></li>
-            <li><a href="howto.html">How-to</a></li>
-        </ul>
-    </nav>
+      <div id="navbar-placeholder"></div>
+
+      
 
     
         <h1>Join Us</h1>

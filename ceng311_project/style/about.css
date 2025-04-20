@@ -5,48 +5,40 @@ body {
     background-color: #f9f9f9; 
     background-image: linear-gradient(rgba(255, 255, 255, 0.50)), url('../image/background.avif');
 }
-
-/* General text styling for all paragraphs */
-body p {
-    font-size: 16px; 
-    color: #383838; 
-    margin-bottom: 4%; 
-}
-
-/* Main page title */
 .main-title {
-    text-align: center; /* Center the title */
-    margin-top: 40px; 
-    margin-bottom: 20px; /* Adjust top and bottom margins */
-}
+    text-align: center;
+    font-size: 36px;
+    margin: 40px 0 20px;
+    color: #0c3b84;
+  }
+  
+  .card-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
 
-/* Card container */
-.card-container {
-    display: flex; /* Align content horizontally */
-    flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
-    gap: 20px; /* Space between cards */
-    max-width: 1000px; /* Set the maximum width */
-    margin: 0 auto; 
-    padding: 0 20px; 
-}
+  .card-container h2 {
+    color: #0c3b84;
+  }
+  
 
-/* Styling for h2 and p inside card-container */
-.card-container h2 {
-    margin-top: 2px; 
-    margin-bottom: 3px; 
-}
+  .card-container:last-of-type {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
 
-.card-container p {
-    margin-top: 0px; 
-}
-
-/* Card styling for Vision & Mission */
-.solid {
-    background-color: #fff; 
-    flex: 1; 
-    min-width: 280px; 
-    border-radius: 8px; 
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
-    padding: 20px; 
-    border: 1px solid #ddd; 
-}
+  .card-container + .card-container {
+    margin-top: 40px;
+  }  
+  
+  .solid {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    padding: 20px;
+    flex: 1;
+    min-width: 280px;
+  }

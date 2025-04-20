@@ -4,29 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
-    <link rel="stylesheet" href="style/navbar.css">
     <link rel="stylesheet" href="style/team.css">
 </head>
 <body>
 
-    <!-- Navigation Bar (Used across all pages) -->
-    <nav class="navbar">
-        <div class="logo-container">
-            <!-- Logo Image -->
-            <img src="image/logo.jpg" alt="Logo" class="logo">
-            <span class="logo-text">Toy Inventory</span>
-        </div>
-        
-        <!-- Navigation Links -->
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="join.html">Join Us</a></li>
-            <li><a href="team.html">Our Team</a></li>
-            <li><a href="howto.html">How-to</a></li>
-        </ul>
-    </nav>
+    <div id="navbar-placeholder"></div>
+
+    <script>
+    fetch("navbar.html")
+        .then(res => res.text())
+        .then(data => {
+        document.getElementById("navbar-placeholder").innerHTML = data;
+        });
+    </script>
     
     <!-- Page Title -->
     <h1>Our Team</h1>
