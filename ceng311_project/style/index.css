@@ -80,5 +80,34 @@ body {
 #main-content {
     padding-top: 3px; 
 }
+.statistics-section {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap; 
+  margin-top: 40px;
+}
+
+.stat-card {
+  width: 200px;
+  padding: 10px;
+  background: #ffffff;
+  text-align: center;
+}
+
+.progress-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  justify-content: center;
+}
+
+.ui-progressbar {
+  width: 100px;
+  height: 8px;
+  background: #ddd;
+  border-radius: 10px;
+}
 
 

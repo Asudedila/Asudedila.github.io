@@ -5,25 +5,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oyuncak Mucitleri</title>
     <link rel="stylesheet" href="style/index.css">
+    <!-- jQuery UI -->
+    <script src="jquery/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="jquery/jquery-ui.css">
+    <script src="jquery/jquery-ui.min.js"></script>
+    <script src="scripts/index.js" ></script>
+
+
 </head>
 <body>
 
+    <!-- Navbar -->
     <div id="navbar-placeholder"></div>
-
-    <script>
-    fetch("navbar.html")
-        .then(res => res.text())
-        .then(data => {
-        document.getElementById("navbar-placeholder").innerHTML = data;
-        });
-    </script>
 
     <!-- Main Content -->
     <main id="main-content">
         <header class="hero">
-            <h1>Welcome to Oyuncak Mucitleri</h1>
+            <h1>Welcome to Oyuncak Mucitleri</h1> 
             <p>Bringing joy to children through handcrafted toys</p>
         </header>
+
+        <section class="statistics-section">
+            <div class="stat-card">
+              <h4>👥 Volunteer Count</h4>
+              <div class="progress-wrap">
+                <div id="volunteer-bar"></div>
+                <span id="volunteer-label">152</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <h4>📦 Toys Sent</h4>
+              <div class="progress-wrap">
+                <div id="toy-bar"></div>
+                <span id="toy-label">1270</span>
+              </div>
+            </div>
+            <div class="stat-card">
+              <h4>🏙️ Cities Reached</h4>
+              <div class="progress-wrap">
+                <div id="city-bar"></div>
+                <span id="city-label">23</span>
+              </div>
+            </div>
+          </section>
+          
+          
 
         <!-- INFORMATION ABOUT ACTIVITY SECTION -->
         <section class="info-container">
@@ -42,14 +68,16 @@
         </section>
 
         <div class="button-container">
-            <a href="#" class="cta-button">Get Involved</a>
+            <a href="join.html" class="cta-button">Get Involved</a>
         </div>
     </main>
 
     <!-- Footer -->
     <footer id="footer">
-        <p>&copy; 2024 Oyuncak Mucitleri. All rights reserved.</p>
+        <p> 2025 Oyuncak Mucitleri. All rights reserved.</p>
     </footer>
+
+   
 
 </body>
 </html>
