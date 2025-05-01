@@ -28,13 +28,16 @@ $(document).ready(function () {
       }
     });
   
-    // SSS 
-    $(".faq-question").click(function () {
-      $(this).toggleClass("active").next(".faq-answer").slideToggle();
-      $(".faq-question").not(this).removeClass("active").next(".faq-answer").slideUp();
-    });
+    
+      $("#faq-accordion").accordion({
+        collapsible: true,
+        heightStyle: "content",
+        animate: 200
+      });
+    
+    
   
-    // Form Validasyonu: Volunteer
+    // Form : Volunteer
     $("#volunteer-form").validate({
       rules: {
         firstname: "required",
@@ -67,7 +70,7 @@ $(document).ready(function () {
         }
     });
   
-    // Form Validasyonu: Sponsor
+    // Form : Sponsor
     $("#sponsor-form").validate({
       rules: {
         firstName: "required",
