@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | Asude Dila Açıkgöz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+      <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Asude Dila Açıkgöz</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="activities.html">Activities</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cv.html">CV</a></li>
+            </ul>
+        </div>
+        <div class="social-links">
+            <a href="linkedin.com/in/asude-dila-açıkgöz-673466227" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/Asudedila" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <h1>Projects</h1>
+    </section>
+
+    <section class="project-section">
+        <div class="slider-container">
+            <!-- LEFT: Slideable Images -->
+            <div class="slider-gallery">
+                <button class="arrow left" onclick="prevSlide('slides-akademi')">&#10094;</button>
+                <div class="slides" id="slides-akademi">
+                    <img src="images/5.PNG" class="slide active" alt="Project 1">
+                    <img src="images/1.png" class="slide" alt="Project 2">
+                    <img src="images/4.png" class="slide" alt="Project 3">
+                </div>
+                <button class="arrow right" onclick="nextSlide('slides-akademi')">&#10095;</button>
+            </div>
+
+            <!-- RIGHT: Description -->
+            <div class="slider-description">
+                <h2>Öğrencim Olur Musun? ACADEMY</h2>
+                <p>I voluntarily contribute to a non-profit academy aiming to support primary and secondary school students affected by educational inequality. In this project, I develop interactive user interfaces using React, and manage data storage and backend functionality with Supabase and Prisma technologies.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-section">
+        <div class="slider-container">
+            <div class="slider-gallery">
+                <button class="arrow left" onclick="prevSlide('slides-teknofest')">&#10094;</button>
+                <div class="slides" id="slides-teknofest">
+                    <img src="images/9.png" class="slide active" alt="Teknofest 1">
+                </div>
+                <button class="arrow right" onclick="nextSlide('slides-teknofest')">&#10095;</button>
+            </div>
+
+            <div class="slider-description">
+                <h2>Teknofest Rocket Team – Avionics</h2>
+                <p>I was part of the avionics team in the Teknofest Rocket Competition. I programmed pressure, temperature, and communication sensors using Arduino. I contributed to data collection systems, wireless communication, and flight testing processes. This project gave me valuable experience in hardware-software integration.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-section">
+        <div class="slider-container">
+            <div class="slider-gallery">
+                <button class="arrow left" onclick="prevSlide('slides-staj')">&#10094;</button>
+                <div class="slides" id="slides-staj">
+                    <img src="images/13.png" class="slide active" alt="Internship Image 1">
+                    <img src="images/14.png" class="slide" alt="Internship Image 2">
+                </div>
+                <button class="arrow right" onclick="nextSlide('slides-staj')">&#10095;</button>
+            </div>
+
+            <div class="slider-description">
+                <h2>Ministry of Industry and Technology – Internship</h2>
+                <p>During my internship, I developed RESTful APIs using Spring Boot and ensured their performance through comprehensive testing. I designed user-friendly interfaces with React Prime and gained experience in data management and optimization with MSSQL database systems. This internship gave me strong full-stack development experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-section">
+      <div class="slider-container">
+        <!-- Gallery -->
+        <div class="slider-gallery">
+          <button class="arrow left" onclick="prevSlide('slides-recipe')">&#10094;</button>
+          
+          <button class="arrow right" onclick="nextSlide('slides-recipe')">&#10095;</button>
+        </div>
+    
+        <!-- Description -->
+        <div class="slider-description">
+          <h2>Recipe Finder Application</h2>
+          <p>I developed a recipe book application using C++ and Qt. The application offers various recipes based on the ingredients selected by the user. With a user-friendly interface, users can enter ingredients, and the application quickly suggests recipes that match the inputs. This project improved my desktop application development and UI design skills.</p>
+        </div>
+      </div>
+    </section>
+    <section class="project-section">
+      <div class="slider-container">
+        <!-- Gallery -->
+        <div class="slider-gallery">
+          <button class="arrow left" onclick="prevSlide('slides-pathblocker')">&#10094;</button>
+          <div class="slides" id="slides-pathblocker">
+            <img src="images/15.png" class="slide active" alt="Path Blocker Game 1">
+            <img src="images/16.png" class="slide" alt="Path Blocker Game 2">
+          </div>
+          <button class="arrow right" onclick="nextSlide('slides-pathblocker')">&#10095;</button>
+        </div>
+    
+        <!-- Description -->
+        <div class="slider-description">
+          <h2>Path Blocker Game</h2>
+          <p>I designed and developed the Path Blocker Game using Java and image processing techniques. The game challenges players to find the shortest path from start to finish while avoiding obstacles. It uses the Breadth-First Search (BFS) algorithm for pathfinding and integrates dynamic visual elements to enhance the gameplay experience.</p>
+        </div>
+      </div>
+    </section>
+        
+
+    <script>
+        const sliderIndexes = {};
+      
+        function showSlide(containerId, index) {
+            const slides = document.querySelectorAll(`#${containerId} .slide`);
+            slides.forEach((slide, i) => {
+                if (i === index) {
+                    slide.classList.add('active');
+                    slide.style.display = 'block';
+                } else {
+                    slide.classList.remove('active');
+                    slide.style.display = 'none';
+                }
+            });
+        }
+      
+        function nextSlide(containerId) {
+            if (!sliderIndexes[containerId]) sliderIndexes[containerId] = 0;
+            const slides = document.querySelectorAll(`#${containerId} .slide`);
+            sliderIndexes[containerId] = (sliderIndexes[containerId] + 1) % slides.length;
+            showSlide(containerId, sliderIndexes[containerId]);
+        }
+      
+        function prevSlide(containerId) {
+            if (!sliderIndexes[containerId]) sliderIndexes[containerId] = 0;
+            const slides = document.querySelectorAll(`#${containerId} .slide`);
+            sliderIndexes[containerId] = (sliderIndexes[containerId] - 1 + slides.length) % slides.length;
+            showSlide(containerId, sliderIndexes[containerId]);
+        }
+      
+        // Initialize sliders on page load
+        window.onload = function () {
+            document.querySelectorAll(".slides").forEach(slider => {
+                const id = slider.id;
+                sliderIndexes[id] = 0;
+                const slides = slider.querySelectorAll(".slide");
+                slides.forEach((slide, index) => {
+                    slide.style.display = index === 0 ? 'block' : 'none';
+                });
+            });
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activities | Asude Dila Açıkgöz</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">Asude Dila Açıkgöz</div>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="experience.html">Experience</a></li>
+                    <li><a href="skills.html">Skills</a></li>
+                    <li><a href="activities.html">Activities</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cv.html">CV</a></li>
+                </ul>
+            </div>
+            <div class="social-links">
+                <a href="https://linkedin.com/in/asude-dila-açıkgöz-673466227" target="_blank" aria-label="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/Asudedila" target="_blank" aria-label="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Activities</h1>
+        </section>
+
+        <section class="activities">
+            <div class="activity-card" id="muhendishane">
+                <div class="activity-icon">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <div class="activity-content">
+                    <h2>Mühendishane Communication Module</h2>
+                    <p>As part of the Mühendishane program, I received comprehensive training in communication skills, presentation techniques, and professional communication strategies. This module helped me improve how I convey technical knowledge effectively and enhanced my ability to communicate professionally in business environments.</p>
+                    <div class="activity-details">
+                        <span class="date"><i class="far fa-calendar-alt"></i> 2023</span>
+                        <span class="location"><i class="fas fa-map-marker-alt"></i> Ankara</span>
+                    </div>
+                    <div class="activity-tags">
+                        <span>Communication</span>
+                        <span>Presentation Skills</span>
+                        <span>Professional Development</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card" id="unity">
+                <div class="activity-icon">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <div class="activity-content">
+                    <h2>Unity Course</h2>
+                    <p>In this course focused on the Unity game engine, I learned the fundamentals of 3D game development. I worked with the C# programming language to develop game mechanics, physics engines, and user interfaces. At the end of the course, I built a simple game prototype to apply my theoretical knowledge in practice.</p>
+                    <div class="activity-details">
+                        <span class="date"><i class="far fa-calendar-alt"></i> 2022</span>
+                        <span class="location"><i class="fas fa-map-marker-alt"></i> Online</span>
+                    </div>
+                    <div class="activity-tags">
+                        <span>Unity</span>
+                        <span>Game Development</span>
+                        <span>C#</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card" id="milli-yetkinlik">
+                <div class="activity-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <div class="activity-content">
+                    <h2>National Competence Initiative</h2>
+                    <p>Within the scope of the National Competence Initiative program, I received training in software development, data science, and digital transformation. This program provided me with the opportunity to take part in strategic projects and play a role in the national tech ecosystem. I also built valuable connections by networking with industry professionals.</p>
+                    <div class="activity-details">
+                        <span class="date"><i class="far fa-calendar-alt"></i> 2025</span>
+                        <span class="location"><i class="fas fa-map-marker-alt"></i> Istanbul</span>
+                    </div>
+                    <div class="activity-tags">
+                        <span>Software Development</span>
+                        <span>Data Science</span>
+                        <span>Digital Transformation</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="activity-card" id="t3-ai">
+                <div class="activity-icon">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="activity-content">
+                    <h2>T3 AI Volunteer</h2>
+                    <p>I volunteered in artificial intelligence projects under the T3 Foundation. I gained hands-on experience in building machine learning models, data analysis, and AI applications. Additionally, I mentored young participants in AI workshops and had the opportunity to share my knowledge with others.</p>
+                    <div class="activity-details">
+                        <span class="date"><i class="far fa-calendar-alt"></i> 2023 - Ongoing</span>
+                        <span class="location"><i class="fas fa-map-marker-alt"></i> Online</span>
+                    </div>
+                    <div class="activity-tags">
+                        <span>Artificial Intelligence</span>
+                        <span>Machine Learning</span>
+                        <span>Volunteering</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+            this.classList.toggle('active');
+        });
+
+        // Scroll animation for activity cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.activity-card');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            cards.forEach(card => {
+                observer.observe(card);
+            });
+        });
+    </script>
+</body>
+</html>
