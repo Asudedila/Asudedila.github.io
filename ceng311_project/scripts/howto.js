@@ -49,31 +49,26 @@ window.addEventListener("click", (e) => {
   if (e.target === popup) closePopup();
 });
 
-//Fetch data with external WEATHER API
-function getWeather() {
-  const latitude = 39.9208;
-  const longitude = 32.8541;
-
-  fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`)
+// Grab a random children's book from OpenLibrary
+function getBook() {
+  fetch("https://openlibrary.org/search.json?q=children")
     .then(res => res.json())
     .then(data => {
-      const weather = data.current_weather;
-      const temp = weather.temperature;
-      const wind = weather.windspeed;
-
-      
-
-      document.getElementById("weather-box").textContent =
-        `The weather in Ankara is currently ${temp}°C, wind ${wind} km/s.`;
+      const docs = data.docs;
+      const randomBook = docs[Math.floor(Math.random() * docs.length)];
+      const title = randomBook.title;
+      const author = randomBook.author_name ? randomBook.author_name[0] : "Bilinmeyen";
+      const box = document.getElementById("book-box");
+      box.innerHTML = `
+        <p><strong>${title}</strong></p>
+        <p>Yazar: ${author}</p>
+      `;
     })
     .catch(err => {
-      document.getElementById("weather-box").textContent = "No weather data was received.";
-      console.error("Weather API error:", err);
+      document.getElementById("book-box").textContent = "Kitap önerisi alınamadı.";
+      console.error("Book API error:", err);
     });
 }
 
-
-
-document.addEventListener("DOMContentLoaded", getWeather);
-
-
+// Automatically fetch books when page loads
+document.addEventListener("DOMContentLoaded", getBook);
