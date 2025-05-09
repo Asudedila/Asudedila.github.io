@@ -61,11 +61,11 @@ function getBook() {
       const box = document.getElementById("book-box");
       box.innerHTML = `
         <p><strong>${title}</strong></p>
-        <p>Yazar: ${author}</p>
+        <p>Author: ${author}</p>
       `;
     })
     .catch(err => {
-      document.getElementById("book-box").textContent = "Kitap önerisi alınamadı.";
+      document.getElementById("book-box").textContent = "No book suggestions were received.";
       console.error("Book API error:", err);
     });
 }
