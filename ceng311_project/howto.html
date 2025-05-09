@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>How To</title>
   <link rel="stylesheet" href="style/howto.css" />
-  <script src="scripts/howto.js" ></script>
+  <script src="scripts/howto.js" defer></script>
 </head>
 <body>
 
   <div id="navbar-placeholder"></div>
- 
+
   <h1>How To Make Toys</h1>
   <p class="intro">Learn how to create handmade toys for children in need.</p>
 
@@ -32,6 +32,11 @@
     </div>
   </section>
 
+  <section>
+    <h2>Today's Weather (Ankara)</h2>
+    <div id="weather-box">Loading weather...</div>
+  </section>
+
   <div id="popup-overlay" style="display: none;">
     <div id="popup-content">
       <span class="close-btn" onclick="closePopup()">&times;</span>
@@ -40,9 +45,9 @@
     </div>
   </div>
 
-  
   <footer id="footer">
-    <p> 2025 Oyuncak Mucitleri. All rights reserved.</p>
+    <p>2025 Oyuncak Mucitleri. All rights reserved.</p>
   </footer>
+
 </body>
 </html>
